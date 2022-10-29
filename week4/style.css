@@ -1,0 +1,126 @@
+/*****************************
+FLEXBOX LAYOUT STYLES
+
+** ROOT STYLES AND OTHER STYLES SPANNING MULTIPLE ELEMENTS
+*****************************/
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+body,
+p + a{
+  background-color: var(--light-gray);
+}
+
+/***********************************
+** MAIN CONTENT STYLING
+***********************************/
+main{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 32rem; 
+  height: 100%;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 5rem 4.7rem 3rem;
+}
+
+.card-sedan{
+  background-color: var(--orange);
+}
+
+.card-suv{
+  background-color: var(--dark-cyan);
+}
+
+.card-luxury{
+  background-color: var(--very-dark-cyan);
+}
+
+img{
+  width: 7rem;
+}
+
+h3{
+  margin: 0.5rem  0;
+  
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--light-gray);
+}
+
+p + a{
+  width: fit-content;
+  margin-top: 6rem;
+  padding: 1.5rem 3rem;
+  border: 2px solid var(--light-gray);
+  border-radius: 50rem;
+
+  text-decoration: none;
+}
+
+p + a:hover{
+  background: none;
+  transition: 0.4s ease-in-out all;
+
+  color: var(--light-gray);
+}
+
+.card-sedan a{
+  color: var(--orange);
+}
+
+.card-suv a{
+  color: var(--dark-cyan);
+}
+
+.card-luxury a{
+  color: var(--very-dark-cyan);
+}
+
+/**************************
+** MEDIA QUERIES FOR FLEXBOX LAYOUT
+**************************/
+@media screen and (min-width: 768px){
+  .cards-container{
+    flex-direction: row;
+    max-width: 90rem;
+  }
+
+  .card-sedan{
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .card-luxury{
+    border-radius: 0 1rem 1rem 0;
+  }
+}

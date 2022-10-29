@@ -1,0 +1,63 @@
+html{
+  font-size: 62.5%;
+}
+
+/*************************
+** GRID LAYOUT STYLES
+*************************/
+main{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "box1 box1 box1 box2 box2"
+    "box1 box1 box1 box2 box2"
+    "box3 box3 box4 box4 box4"
+    "box3 box3 box5 box5 box5";
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  min-width: 35rem;
+  height: 30rem;
+}
+
+.box1 { 
+  background: #EB5020;
+  grid-area: box1; 
+}
+
+.box2 { 
+  background: #FFA401;
+  grid-area: box2; 
+}
+
+.box3 { 
+  background: #05AA42;
+  grid-area: box3; 
+}
+
+.box4 { 
+  background: #02B4FD;
+  grid-area: box4; 
+}
+
+.box5 { 
+  background: #02B4FD;
+  grid-area: box5; 
+}
+
+/*****************************
+** MEDIA QUERIES FOR GRID LAYOUT
+*****************************/
+@media screen and (min-width: 768px){
+  .grid-container {
+    min-width: 74rem;
+    height: 60rem;
+  }
+}
